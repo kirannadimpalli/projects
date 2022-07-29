@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Project</title>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+
+    <!-- sidebar -->
+        <div class="sidebar" id="sidebar">
+            <a href="#" class="logo">ACME</a>
+            <div class="nav-page">
+                <img src="photos/icon_home/icon_home@2x.png" alt="home">
+                <p>Home</p>
+            </div>
+            <div class="bg-color">
+                <img src="photos/icon_dashboard/icon_dashboard@2x.png" alt="home">
+                <p>Dashboard</p>
+            </div>
+            <div class="nav-page notify ">
+                <div class="inbox">
+                    <img src="photos/icon_inbox/icon_inbox@2x.png" alt="home">
+                    <p>Inbox</p>
+                </div>
+                <div class="newnotify">
+                    New
+                </div>
+            </div>
+            <div class="nav-page">
+                <img src="photos/icon_products/icon_products@2x.png" alt="home">
+                <p>Product</p>
+            </div>
+            <div class="nav-page">
+                <img src="photos/icon_admin/icon_admin@2x.png" alt="home">
+                <p>Admin</p>
+            </div>
+        </div>
+
+
+
+        <div class="wrapper" id="wrapper">
+
+            <div class="main">
+                <!-- header -->
+                <header class="header" id="header">
+                    <div class="leftnav">
+                        <div class="toggle" onclick="toggleClassName()"><img src="photos/menu.svg" alt="menu"></div>
+                        <div class="search"><img src="photos/icon_search.svg" alt="search"></div>
+                        <div class="search-help">
+                            <input type="tel" id="phone" name="phone"
+                                placeholder="Search transactions, invoices or help">
+                        </div>
+                    </div>
+                    <!-- notification -->
+                    <div class="rightnav">
+                        <div class="icon-button">
+
+                            <div class="notification1" onclick="notification()"> <img src="photos/notification.svg"
+                                    alt="notify"> </div>
+                            <span class="icon-button__badge" onclick="notification()"></span>
+                        </div>
+                        <div class="name" onclick="dropdown()">John Doe</div>
+                        <div class="smalldown" onclick="dropdown()"><img src="photos/small-down.svg" alt="smalldown">
+                        </div>
+                        <div class="profile" onclick="dropdown()"><img src="photos/Avatar@2x.png" alt="profile"
+                                height="30px" width="30px">
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+
+            <!-- notify-item -->
+            <div class="notify-item" onclick="notification()">
+
+                   <!-- user1 -->
+                <div class="users1">
+                    <div class="left">
+                        <img src="photos/profile-pic@2x 3.png" alt="user1" width="50px">
+                        <div class="leftinside">
+                            <p>Lavid Emes</p>
+                            <div class="opacity">Assigned you on the call with Sara</div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>2 min ago</p>
+                    </div>
+                </div>
+                <!-- user2 -->
+                <div class="users1">
+                    <div class="left">
+                        <img src="photos/profile-pic@2x.png" alt="user1" width="50px">
+                        <div class="leftinside">
+                            <p>Drew James</p>
+                            <div class="opacity">Marked the task <span>New UI</span> as done </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>5 min ago</p>
+                    </div>
+                </div>
+                <!-- user3 -->
+                <div class="users1">
+                    <div class="left">
+                        <img src="photos/profile-pic@2x 2.png" alt="user1" width="50px">
+                        <div class="leftinside">
+                            <p>Bavid kames</p>
+                            <div class="opacity">Added a new comment on sales task</div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>10 min ago</p>
+                    </div>
+                </div>
+
+                <div class="showmore"><a href="">Show More</a></div>
+
+            </div>
+
+            <!-- ---profile down-- -->
+            <div class="profiledown" onclick="dropdown()">
+                <div class="option1">
+                    <div class="profileimg">
+                        <img src="photos/icon-my-profile.svg" alt="">
+                    </div>
+                    <div class="profilename">
+                        <p>My Profile</p>
+                    </div>
+                </div>
+                <div class="option1">
+                    <div class="profileimg">
+                        <img src="photos/icon-billing.svg" alt="">
+                    </div>
+                    <div class="profilename">
+                        <p>Billing</p>
+                    </div>
+                </div>
+                <div class="option1">
+                    <div class="profileimg">
+                        <img src="photos/icon-logout.svg" alt="">
+                    </div>
+
+                    <div class="profilename">
+                        <p>Logout</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- second nav -->
+            <div class="second-nav">
+                <div class="overview">Overview</div>
+
+                <div class="button">
+                    <div class="button-left"><span>Add Funds</span></div>
+                    <div class="button-right"><img src="photos/add-outline.svg" alt="" ></div>
+                    
+
+           
+                </div>
+            </div>
+
+
+             <!-- layout -->
+            <div class="layout">
+                <!-- box1 -->
+                <div class="box1">
+                    <div class="box1flex">
+                        <p class="tag">Statisics</p>
+                        <div class="box1flex2">
+                            <p class="tag">Last 6 months</p>
+                            <img src="photos/small-down.svg" alt="">
+                        </div>
+                    </div>
+                    
+                    <div id="curve_chart"></div>
+                </div>
+                <!-- box2 -->
+                <div class="box2">
+                    <p>Sales Distribution</p>
+                    <div class="total">
+                        <div class="number1">230,900 <br> <pre>Sales</pre></div>
+                        <canvas id="mycharts"></canvas>
+                        <div class="all">
+                            <div class="lower">
+                                <div class="left1">
+                                    <div class="blue blue1"></div>
+                                    France <span>4260 sales</span>
+                                </div>
+                                <div class="left2">
+                                    <div class="blue yellow"></div>
+                                    Japan <span>4260 sales</span>
+                                </div>
+                            </div>
+                            <div class="lower-right">
+                                <div class="left1">
+                                    <div class="blue orange"></div>
+                                    Italy <span>3970 sales</span>
+                                </div>
+                                <div class="left2">
+                                    <div class="blue purple"></div>
+                                    Canada <span>3970 sales</span>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                </div>
+                <!-- box3 -->
+                <div class="box3">
+                    <!-- profileview -->
+                    <div class="profileview">
+                        <img src="photos/profile-pic-01.jpg" alt="profilepic">
+                        <div class="editpin"><img src="photos/edit.svg" alt="" ></div>
+                        <div class="editpin1"><img src="photos/edit.svg" alt=""></div>
+                        <p>Nike Hevasimenka</p>
+                        <div class="opacity">United states</div>
+                        <div class="socialmedia">
+                            <ul>
+                                <li><a href="#"><img src="photos/twitter.svg" alt=""></a></li>
+                                <li><a href="#"><img src="photos/facebook.svg" alt=""></a></li>
+                                <li><a href="#"><img src="photos/linkedin.svg" alt=""></a></li>
+                                <li><a href="#"><img src="photos/whatsapp.svg" alt=""></a></li>
+                            </ul>
+
+                        </div>
+                        <div class="border"></div>
+                    </div>
+                    <!-- users -->
+                    <div class="users">
+
+                        <div class="ourusers">
+                            <p>Our Users</p>
+                            <img src="photos/options@2x.png" alt="menu" height="20px">
+                        </div>
+                        <!-- user1 -->
+                        <div class="users1">
+                            <div class="left">
+                                <img src="photos/profile-pic@2x.png" alt="user1" width="50px">
+                                <div class="leftinside">
+                                    <p>Drew James</p>
+                                    <div class="opacity">United states</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>Mobile: 8715674877</p>
+                            </div>
+                        </div>
+                        <!-- user2 -->
+                        <div class="users1">
+                            <div class="left">
+                                <img src="photos/profile-pic@2x 2.png" alt="user1" width="50px">
+                                <div class="leftinside">
+                                    <p>Bavid kames</p>
+                                    <div class="opacity">United states</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>Mobile: 8715674877</p>
+                            </div>
+                        </div>
+                        <!-- user3 -->
+                        <div class="users1">
+                            <div class="left">
+                                <img src="photos/profile-pic@2x 3.png" alt="user1" width="50px">
+                                <div class="leftinside">
+                                    <p>Lavid Emes</p>
+                                    <div class="opacity">United states</div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>Mobile: 8715674877</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- box4 -->
+                <div class="box4">
+                    <p>Referrer</p>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Location</th>
+                                    <th>Views</th>
+                                    <th>Sales</th>
+                                    <th>Conversion</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="https://google.com">google.com</a></td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19,291</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://facebook.com">facebook.com</a></td>
+                                    <td>8126</td>
+                                    <td>728</td>
+                                    <td>32%</td>
+                                    <td>$17,638</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://twitter.com">twitter.com</a></td>
+                                    <td>8836</td>
+                                    <td>728</td>
+                                    <td>32%</td>
+                                    <td>$16,218</td>
+                                </tr>
+                                <tr>
+                                    <td>Direct,Email,IM</td>
+                                    <td>1173</td>
+                                    <td>645</td>
+                                    <td>24%</td>
+                                    <td>$14,421</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="https://linkedin.com">linkedin.com</a></td>
+                                    <td>2739</td>
+                                    <td>539</td>
+                                    <td>20%</td>
+                                    <td>$12,370</td>
+
+                                </tr>
+                                <tr>
+                                    <td><a href="https://instagram.com">instagram.com</a></td>
+                                    <td>2739</td>
+                                    <td>539</td>
+                                    <td>20%</td>
+                                    <td>$12,370</td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="showmore">Show More</div>
+                </div>
+                <!-- box5 -->
+                <div class="box5">
+                    <div class="innername">
+                        <p>Product Video</p>
+                        <img src="photos/options@2x.png" alt="menu" height="24px">
+                    </div>
+                    <iframe src="https://www.youtube.com/embed/Oy6hk6Y7VHQ" frameborder="0"
+                        allow="accelerometer; autoplay; modestbranding; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Year', 'Production', 'Views'],
+                ['Jan', 9000, 30000],
+                ['Feb', 16000, 9000],
+                ['Mar', 28000, 11000],
+                ['Apr', 8000, 22000],
+                ['may', 28000, 9000],
+                ['jun', 13000,30000]
+            ]);
+
+            var options = {
+                hartArea: {'width': '100%', 'height': '70%'},
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+
+
+        
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script src="index.js"></script>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+    <script>
+        var ctx=document.getElementById("mycharts");
+        var mycharts= new Chart(ctx,{
+            type: 'doughnut',
+            data: {
+        labels: ['France', 'Italy', 'Japan', 'Canada',],
+        datasets: [{
+            data: [4260, 3970, 4260, 3970],
+            backgroundColor: [
+                '#80E2FF',
+                '#F49FA8',
+                '#FFDF94',
+                '#A3A0FB',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 0.7)',
+                'rgba(54, 162, 235, 0.7)',
+                'rgba(255, 206, 86, 0.7)',
+                'rgba(75, 192, 192, 0.7)',
+                'rgba(153, 102, 255, 0.7)',
+                'rgba(255, 159, 64, 0.7)'
+            ],
+            borderWidth: 1
+        }]
+
+    },
+    options: {
+        maintainAspectRatio:false,
+        responsive: false,
+        legend: {
+            display: false
+         },
+
+    }
+
+
+        });
+    </script>
+
+</body>
+
+</html>
